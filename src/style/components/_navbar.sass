@@ -1,0 +1,88 @@
+.navbar-container
+    @include width-height(100%,8rem)
+    @include flexbox(row, center, center, 5rem)
+    @include set-position(absolute, 0,0)
+    z-index:10
+    padding: 2rem 0 0 2rem
+
+    .bg-overlayer
+        @include set-position(absolute,0,0)
+        @include width-height(100%, 100vh)
+        background-color: rgba($black,0.4)
+        transition: all 0.3s linear
+        opacity: 0
+        z-index: -1
+        &.expand
+            opacity: 1
+
+    .burger-btn
+        @include set-position(absolute,0,0)
+        top: 50%
+        left: 3rem
+        @include width-height(3rem,2rem)
+
+    .navbar-title
+        @include set-font($white, "League Spartan", 3.4rem,500, normal)
+    
+    .links-container
+        @include width-height(100%, 11rem)
+        @include set-position(absolute, 0,0)
+        @include flexbox(row, space-between, center,2.7rem)
+        background-color: white
+        transition: all 0.2s ease
+        top: -11rem
+        padding: 0 2.5rem 0 2.5rem
+        &.expand
+            top: 0
+        div
+            @include flexbox(row, space-between, center,2.5rem)
+            .navbar-link
+                @include set-font($black, "League Spartan", 1.6rem,700, normal)
+            .close-btn
+
+
+// DESKTOP DESIGN
+@include respond(desktop)
+    .navbar-container
+        @include width-height(100%, 7rem)
+        @include set-position(absolute,0,0)
+        @include flexbox(row, flex-start, center, 5rem)
+        background-color: transparent
+        padding: 5.5rem 0 2rem 7rem
+
+        .burger-btn
+            display: none
+        .bg-overlayer
+            display: none
+
+        .navbar-title
+            @include set-font($white, "League Spartan", 3.4rem,500, normal)
+        
+        .links-container
+            @include flexbox(row, flex-start, center, 4rem)
+            position: unset
+            background: transparent
+            padding: 0
+            
+
+            .close-btn
+                display: none
+
+            div
+
+                .navbar-link
+                    @include set-font($white, "League Spartan", 2rem,500, normal)
+                    cursor: pointer
+                    position: relative
+
+                    .selector
+                        @include width-height(80%, 0.3rem)
+                        background-color: white
+                        position: absolute
+                        top: 130%
+                        right: 0
+                        transition: all 0.2s linear
+                        opacity: 0
+
+                        &.selected
+                            opacity: 1
