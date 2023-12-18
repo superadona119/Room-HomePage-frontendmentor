@@ -1,0 +1,27 @@
+.about {
+    display: grid;
+    grid-template-columns: 59% 41%;
+
+    @include sm {
+        grid-template-columns: 1fr;
+    }
+
+    &__image-wrapper {
+        width: calc(100% - 17.2vh);
+        transform: translateX(17.2vh);
+        min-height: 28.7vh;
+
+        @include sm {
+            min-height: 0;
+            max-height: 26.6rem;
+            width: 100%;
+            transform: translateX(0);
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

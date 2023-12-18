@@ -1,0 +1,44 @@
+//breakpoints at
+// 1440px - xl
+// 1200px - lg 
+// 992px - md
+// 768px - sm
+// 576px - xs
+// 375px - xxs
+
+
+@mixin xl {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin xxs {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
