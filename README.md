@@ -61,8 +61,4 @@ At first glance, this layout looks like something easy to create, but when you d
 - [Resource 3](https://css-tricks.com/snippets/css/css-triangle) - This helped me to learn, how to create arrows using css border.
 - [Resource 4](https://codepen.io/Kezz/pen/mJOJQY) - This code pen from Kezz Bracey, helped me a lot to learn some css button animations.
 
-## Author
 
-- Website - [imdesign94](https://imdesign94.com)
-- Frontend Mentor - [@imd94](https://www.frontendmentor.io/profile/imd94)
-- Twitter - [I do not have a twitter account yet](https://www.twitter.com)
