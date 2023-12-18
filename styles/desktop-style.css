@@ -1,0 +1,233 @@
+@charset 'UTF-8';
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+}
+
+:root{
+    /* Font Family */
+    --leagueSpartan: 'League Spartan';
+
+    /* Font size: 500, 600 and 700 */
+
+    /* Primary colors */
+    --darkGray: hsl(0, 0%, 63%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --veryDarkGray: hsl(0, 0%, 27%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--leagueSpartan);
+}
+
+html, body{
+    width: 100%;
+}
+
+.main-container{
+    display: grid;
+    grid-template-rows: 639px 261px;
+    height: 100%;
+}
+
+.container1{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    position: relative;
+}
+
+.square1{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding: 75px 65px;
+    background-color: var(--veryDarkGray);
+    background-image: url('../images/desktop-image-hero-1.jpg');
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#icon-burguer{
+    display: none;
+}
+
+/* Estilizar depois o menu abaixo! */
+
+#menu{
+    display: inline-block;
+}
+
+#menu > #close-menu{
+    display: none;
+}
+
+/* Verificar a partir daqui */
+
+#menu > ul{
+    display: inline;
+    float: right;
+    margin-left: 25px;
+    vertical-align: middle;
+    list-style-type: none;
+}
+
+#menu > ul li{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+#menu > ul li a{
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+    padding-bottom: 8px;
+}
+
+#menu > ul li a:hover{
+    border-bottom: 2px solid var(--white);
+}
+
+#logo{
+    display: inline;
+    float: left;
+}
+
+#logo img{
+    width: 65px;
+}
+
+#toggle-img{
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+    right: calc(40% - 144px);
+}
+
+#toggle-img > .button-img{
+    display: inline-block;
+    padding: 30px 29px;
+    background-color: var(--black);
+    cursor: pointer;
+    transition: background-color .4s;
+}
+
+#toggle-img > #previous-img:hover{
+    background-color: var(--veryDarkGray);
+}
+
+#toggle-img > #next-img:hover{
+    background-color: var(--veryDarkGray);
+}
+
+.square2{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: left;
+    padding: 145px 82px 84px;
+}
+
+.square2 > .about-us h1{
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 45px;
+}
+
+.square2 > .about-us p{
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 40px;
+    color: var(--darkGray);
+}
+
+.square2 a{
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 12px;
+    text-decoration: none;
+    color: var(--black);
+    transition: color .1s;
+}
+
+.square2 a:hover{
+    color: var(--darkGray);
+}
+
+.square2 a img{
+    vertical-align: middle; 
+    transition: fill .4s;
+}
+
+.square2 a:hover img{
+    fill: var(--darkGray);
+}
+
+.container2{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+}
+
+.square3{
+    grid-column: 1;
+    grid-row: 1 / 2;
+    height: 261px;
+}
+
+.square3 img{
+    width: 100%;
+    height: 261px;
+}
+
+.square4{
+    grid-column: 2;
+    grid-row: 1 / 2;
+    text-align: left;
+    height: 261px;
+    padding: 60px 35px;
+}
+
+.square4 h2{
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.square4 p{
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--darkGray);
+}
+
+.square5{
+    grid-column: 3;
+    grid-row: 1 / 2;
+    height: 261px;
+}
+
+.square5 img{
+    width: 100%;
+    height: 261px;
+}
+
+.attribution{
+    font-size: 12px;
+    text-align: center;
+    padding: 8px;
+    color: var(--darkGray);
+    background-color: var(--black);
+}
+
+.attribution a{ 
+    text-decoration: none;
+    color: var(--white); 
+}
+
+.attribution a:hover{
+    text-decoration: underline;
+}
